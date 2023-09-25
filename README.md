@@ -1,4 +1,7 @@
-# Accept a Payment with Stripe Checkout
+# HCP Vault Secrets Demo Application 
+HCP Vault Secrets is a centralized SaaS secrets lifecycle management solution. This repository showcases the various ways you can store and fetch secrets securely with your  application. 
+
+We will use Stripe Checkout's sample application to showcase it! 
 
 Stripe Checkout is the fastest way to get started with payments. Included are some basic build and run scripts you can use to start up the application.
 

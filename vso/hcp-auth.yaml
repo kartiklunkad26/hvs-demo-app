@@ -1,0 +1,11 @@
+---
+apiVersion: secrets.hashicorp.com/v1beta1
+kind: HCPAuth
+metadata:
+  name: default
+  namespace: vault-secrets-operator-system
+spec:
+  organizationID: f44344ba-1497-45ec-8e53-fa754661b8ea
+  projectID: 5c7ceebf-a4ea-4445-b172-9a6374627b41
+  servicePrincipal:
+    secretRef: vso-demo-sp

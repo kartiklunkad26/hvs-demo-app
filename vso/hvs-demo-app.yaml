@@ -1,0 +1,13 @@
+apiVersion: secrets.hashicorp.com/v1beta1
+kind: HCPVaultSecretsApp
+metadata:
+  name: payments-api
+  namespace: uber-api-dev
+spec:
+  appName: payments-api
+  destination:
+    create: true
+    labels:
+      hvs: "true"
+    name: stripe-test-secret-key
+  refreshAfter: 1h

@@ -4,7 +4,7 @@ metadata:
   name: payments-api
   namespace: uber-api-dev
 spec:
-  appName: payments-api
+  appName: {{HVS_APP_NAME}}
   destination:
     create: true
     labels:

@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/stripe/stripe-go/v75"
 	"github.com/stripe/stripe-go/v75/checkout/session"
@@ -10,7 +11,8 @@ import (
 
 func main() {
 	// This is your test secret API key.
-	stripe.Key = "sk_test_51MPpMFE6Lf7IWuCA7YLi4fKrkwsMXhPSSJDWbGpBMQzk9uKdXG0Ws6k9N1r7o4flLQxheALbyocA3rGBmhKyN5Ua00ffi1KPsd"
+	//stripe.Key = "sk_test_51MPpMFE6Lf7IWuCA7YLi4fKrkwsMXhPSSJDWbGpBMQzk9uKdXG0Ws6k9N1r7o4flLQxheALbyocA3rGBmhKyN5Ua00ffi1KPsd"
+	stripe.Key = os.Getenv("STRIPE_TEST_SECRET_KEY")
 	http.Handle("/", http.FileServer(http.Dir("public")))
 	http.HandleFunc("/create-checkout-session", createCheckoutSession)
 	addr := "localhost:4242"
@@ -24,7 +26,7 @@ func createCheckoutSession(w http.ResponseWriter, r *http.Request) {
 		LineItems: []*stripe.CheckoutSessionLineItemParams{
 			&stripe.CheckoutSessionLineItemParams{
 				// Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-				Price:    stripe.String("price_1NpAxGE6Lf7IWuCArRkvj57E"),
+				Price:    stripe.String("price_1NuEPsE6Lf7IWuCATnwgy6To"),
 				Quantity: stripe.Int64(1),
 			},
 		},

@@ -9,8 +9,8 @@ terraform {
 
 provider "hcp" {
   # Configuration options
-  client_id     = "V4glblbNTiSK3sEgacBCEmkKkZXIEeYM"
-  client_secret = "nCEJHi6Qf2bnYhmzNyN3ROxAlghZuDhRcp0ytT3S2D-xe37aXZ1r6Uw2vXFULlOd"
+  client_id     = {{HCP_CLIENT_ID}}
+  client_secret = {{HCP_CLIENT_SECRET}}
   project_id = "5b3ad250-078d-4c03-a91a-c04e9fd92ec9"
 }
 

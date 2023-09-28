@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 	"net/http"
-	"os"
 
 	"github.com/stripe/stripe-go/v75"
 	"github.com/stripe/stripe-go/v75/checkout/session"
@@ -11,8 +10,8 @@ import (
 
 func main() {
 	// This is your test secret API key.
-	//stripe.Key = "sk_test_51MPpMFE6Lf7IWuCA7YLi4fKrkwsMXhPSSJDWbGpBMQzk9uKdXG0Ws6k9N1r7o4flLQxheALbyocA3rGBmhKyN5Ua00ffi1KPsd"
-	stripe.Key = os.Getenv("STRIPE_TEST_SECRET_KEY")
+	stripe.Key = "sk_test_51MPpMFE6Lf7IWuCAORoP7YJCuXfZXD03jK40gqDIT2nXS0MXten2NR7OFbY36vU8ZFnzROfTGZZQbpzMshodg8lk00R0nvNzST"
+	//stripe.Key = os.Getenv("STRIPE_TEST_SECRET_KEY")
 	http.Handle("/", http.FileServer(http.Dir("public")))
 	http.HandleFunc("/create-checkout-session", createCheckoutSession)
 	addr := "localhost:4242"

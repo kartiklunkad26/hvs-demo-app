@@ -21,14 +21,14 @@ provider "hcp" {
 //variable "HCP_CLIENT_SECRET" {
 //  type = string
 //}
-/*
+
 resource "hcp_vault_secrets_app" "payments-api" {
-  app_name    = "payments-api"
-  description = "Secrets for the Payments API"
+  app_name    = "test-app"
+  description = "Testing"
 }
-*/
-resource "hcp_vault_secrets_secret" "payments-api" {
-  app_name     = "payments-api"
+
+resource "hcp_vault_secrets_secret" "payments-api-secret" {
+  app_name     = hcp_vault_secrets_app.payments-api.app_name
   secret_name  = "stripe_sk"
   secret_value = "testing"
 }

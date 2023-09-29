@@ -28,8 +28,7 @@ helm list -A
 kubectl create namespace uber-api-dev
 ~~~
 
-4. Build & deploy the payments-api (for now using an independent Kubernetes Secret)
- TBD: build and deploy your image to k8s referencing a kubernetes secret 
+4. Create the Kubernetes Secret for the HCP Service Principal needed to fetch the secrets. For now, I've used Org Service Prinicipal with Viewer permissions. 
 
 ~~~
 kubectl create secret generic vso-demo-sp --from-literal=clientID=$HCP_CLIENT_ID --from-literal=clientSecret=$HCP_CLIENT_SECRET

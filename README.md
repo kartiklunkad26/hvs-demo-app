@@ -17,6 +17,10 @@ go run server.go
 
 3. Go to [http://localhost:4242/checkout.html](http://localhost:4242/checkout.html)
 
+## Pre-Requisites
+1. Ensure you have created an account with Stripe
+2. You will need to create a sample product & price in the Stripe Dashboard - https://support.stripe.com/questions/how-to-create-products-and-prices 
+
 ## Running the sample with vlt with static secrets in HCP Vault Secrets
 
 1. Sign up for HCP at cloud.hashicorp.com

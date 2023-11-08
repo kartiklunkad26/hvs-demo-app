@@ -11,7 +11,7 @@ import (
 func main() {
 	// This is your test secret API key.
 	stripe.Key = "sk_test_51MPpMFE6Lf7IWuCAORoP7YJCuXfZXD03jK40gqDIT2nXS0MXten2NR7OFbY36vU8ZFnzROfTGZZQbpzMshodg8lk00R0nvNzST"
-	//stripe.Key = os.Getenv("STRIPE_TEST_SECRET_KEY")
+	//stripe.Key = os.Getenv("STRIPE_SECRET_TEST_KEY")
 	http.Handle("/", http.FileServer(http.Dir("public")))
 	http.HandleFunc("/create-checkout-session", createCheckoutSession)
 	addr := "localhost:4242"
